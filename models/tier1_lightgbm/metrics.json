@@ -1,0 +1,215 @@
+{
+    "rho_250ms": {
+        "quantiles": {
+            "q10": {
+                "quantile": 0.1,
+                "validation": {
+                    "quantile": 0.1,
+                    "pinball_loss": 6.129034879792339e-06
+                },
+                "test": {
+                    "quantile": 0.1,
+                    "pinball_loss": 1.028926895181638e-05
+                },
+                "model_file": "C:\\Users\\Lenovo\\Desktop\\aegis ai project\\models\\tier1_lightgbm\\rho_250ms_q10.txt"
+            },
+            "q50": {
+                "quantile": 0.5,
+                "validation": {
+                    "quantile": 0.5,
+                    "pinball_loss": 9.07714712695165e-06
+                },
+                "test": {
+                    "quantile": 0.5,
+                    "pinball_loss": 5.510111792731272e-06
+                },
+                "model_file": "C:\\Users\\Lenovo\\Desktop\\aegis ai project\\models\\tier1_lightgbm\\rho_250ms_q50.txt"
+            },
+            "q90": {
+                "quantile": 0.9,
+                "validation": {
+                    "quantile": 0.9,
+                    "pinball_loss": 8.376775974998119e-06
+                },
+                "test": {
+                    "quantile": 0.9,
+                    "pinball_loss": 2.874131910001614e-06
+                },
+                "model_file": "C:\\Users\\Lenovo\\Desktop\\aegis ai project\\models\\tier1_lightgbm\\rho_250ms_q90.txt"
+            }
+        },
+        "interval_metrics": {
+            "validation": {
+                "q10_undercoverage_rate": 0.000975609756097561,
+                "q90_overflow_rate": 0.0017705510388437218,
+                "central_interval_coverage": 0.9972538392050587,
+                "central_interval_target": 0.8,
+                "mean_interval_width": 3.581828510232203e-05
+            },
+            "test": {
+                "q10_undercoverage_rate": 0.06841991185607976,
+                "q90_overflow_rate": 0.0007224911494834188,
+                "central_interval_coverage": 0.9308575969944368,
+                "central_interval_target": 0.8,
+                "mean_interval_width": 1.9302863638813096e-05
+            }
+        },
+        "quantile_order": {
+            "validation": {
+                "violations": 12,
+                "violation_rate": 0.00043360433604336043
+            },
+            "test": {
+                "violations": 1886,
+                "violation_rate": 0.06813091539628639
+            }
+        },
+        "point_metrics_q50": {
+            "mae": 1.1020223585462544e-05,
+            "rmse": 0.00024753572363185806,
+            "r2": 0.006423731170786762
+        }
+    },
+    "rho_750ms": {
+        "quantiles": {
+            "q10": {
+                "quantile": 0.1,
+                "validation": {
+                    "quantile": 0.1,
+                    "pinball_loss": 6.008009991788217e-06
+                },
+                "test": {
+                    "quantile": 0.1,
+                    "pinball_loss": 3.394479792331292e-06
+                },
+                "model_file": "C:\\Users\\Lenovo\\Desktop\\aegis ai project\\models\\tier1_lightgbm\\rho_750ms_q10.txt"
+            },
+            "q50": {
+                "quantile": 0.5,
+                "validation": {
+                    "quantile": 0.5,
+                    "pinball_loss": 1.0882215851146124e-05
+                },
+                "test": {
+                    "quantile": 0.5,
+                    "pinball_loss": 5.634882494575176e-06
+                },
+                "model_file": "C:\\Users\\Lenovo\\Desktop\\aegis ai project\\models\\tier1_lightgbm\\rho_750ms_q50.txt"
+            },
+            "q90": {
+                "quantile": 0.9,
+                "validation": {
+                    "quantile": 0.9,
+                    "pinball_loss": 1.3655910615474717e-05
+                },
+                "test": {
+                    "quantile": 0.9,
+                    "pinball_loss": 5.259325876447901e-06
+                },
+                "model_file": "C:\\Users\\Lenovo\\Desktop\\aegis ai project\\models\\tier1_lightgbm\\rho_750ms_q90.txt"
+            }
+        },
+        "interval_metrics": {
+            "validation": {
+                "q10_undercoverage_rate": 0.001156278229448961,
+                "q90_overflow_rate": 0.0024570912375790426,
+                "central_interval_coverage": 0.996386630532972,
+                "central_interval_target": 0.8,
+                "mean_interval_width": 2.6866249133607858e-05
+            },
+            "test": {
+                "q10_undercoverage_rate": 0.000577992919586735,
+                "q90_overflow_rate": 0.0015533559713893504,
+                "central_interval_coverage": 0.9978686511090239,
+                "central_interval_target": 0.8,
+                "mean_interval_width": 2.3699502815388997e-05
+            }
+        },
+        "quantile_order": {
+            "validation": {
+                "violations": 15,
+                "violation_rate": 0.0005420054200542005
+            },
+            "test": {
+                "violations": 21,
+                "violation_rate": 0.0007586157069575897
+            }
+        },
+        "point_metrics_q50": {
+            "mae": 1.1269764989150353e-05,
+            "rmse": 0.00025314189850927617,
+            "r2": 0.07382235095973733
+        }
+    },
+    "rho_2000ms": {
+        "quantiles": {
+            "q10": {
+                "quantile": 0.1,
+                "validation": {
+                    "quantile": 0.1,
+                    "pinball_loss": 3.977837075038856e-06
+                },
+                "test": {
+                    "quantile": 0.1,
+                    "pinball_loss": 5.96586071873174e-06
+                },
+                "model_file": "C:\\Users\\Lenovo\\Desktop\\aegis ai project\\models\\tier1_lightgbm\\rho_2000ms_q10.txt"
+            },
+            "q50": {
+                "quantile": 0.5,
+                "validation": {
+                    "quantile": 0.5,
+                    "pinball_loss": 1.3208045130935808e-05
+                },
+                "test": {
+                    "quantile": 0.5,
+                    "pinball_loss": 6.876236312867898e-06
+                },
+                "model_file": "C:\\Users\\Lenovo\\Desktop\\aegis ai project\\models\\tier1_lightgbm\\rho_2000ms_q50.txt"
+            },
+            "q90": {
+                "quantile": 0.9,
+                "validation": {
+                    "quantile": 0.9,
+                    "pinball_loss": 1.362128033510936e-05
+                },
+                "test": {
+                    "quantile": 0.9,
+                    "pinball_loss": 5.295092263508944e-06
+                },
+                "model_file": "C:\\Users\\Lenovo\\Desktop\\aegis ai project\\models\\tier1_lightgbm\\rho_2000ms_q90.txt"
+            }
+        },
+        "interval_metrics": {
+            "validation": {
+                "q10_undercoverage_rate": 0.0,
+                "q90_overflow_rate": 0.0026016260162601626,
+                "central_interval_coverage": 0.9973983739837399,
+                "central_interval_target": 0.8,
+                "mean_interval_width": 2.9836608241189786e-05
+            },
+            "test": {
+                "q10_undercoverage_rate": 0.001119861281699299,
+                "q90_overflow_rate": 0.0015533559713893504,
+                "central_interval_coverage": 0.9973267827469113,
+                "central_interval_target": 0.8,
+                "mean_interval_width": 2.337253518707214e-05
+            }
+        },
+        "quantile_order": {
+            "validation": {
+                "violations": 10,
+                "violation_rate": 0.0003613369467028004
+            },
+            "test": {
+                "violations": 63,
+                "violation_rate": 0.0022758471208727694
+            }
+        },
+        "point_metrics_q50": {
+            "mae": 1.3752472625735796e-05,
+            "rmse": 0.0002873404269160259,
+            "r2": -0.06269846770837728
+        }
+    }
+}

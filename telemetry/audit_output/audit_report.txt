@@ -1,0 +1,1441 @@
+AEGIS AI — TELEMETRY DATA QUALITY AUDIT
+================================================================================
+
+1. DATASET SUMMARY
+--------------------------------------------------------------------------------
+Input file: C:\Users\Lenovo\Desktop\telemetry.csv
+File size: 191.92 MB
+Rows: 334,202
+Columns: 108
+Sessions: 8
+Exact duplicate rows: 0
+Duplicate timestamps: 0
+Negative timestamp deltas: 0
+
+2. SESSION AUDIT
+--------------------------------------------------------------------------------
+
+Session: 20260928_174343_970
+  Rows: 999
+  Duration: 0.467 min
+  Mean timestamp delta: 28.0693 ms
+  Min timestamp delta: 16.173
+  Max timestamp delta: 67.994
+  <=30ms: 719
+  30-60ms: 277
+  60-200ms: 2
+  200-2000ms: 0
+  >2000ms: 0
+  Duplicate timestamps: 0
+  Negative deltas: 0
+  Sequence resets: 0
+  Estimated long-gap segments: 1
+
+Session: 20260928_225319_403
+  Rows: 495
+  Duration: 0.243 min
+  Mean timestamp delta: 29.5451 ms
+  Min timestamp delta: 13.278
+  Max timestamp delta: 114.6
+  <=30ms: 345
+  30-60ms: 120
+  60-200ms: 29
+  200-2000ms: 0
+  >2000ms: 0
+  Duplicate timestamps: 0
+  Negative deltas: 0
+  Sequence resets: 0
+  Estimated long-gap segments: 1
+
+Session: 20260929_004932_692
+  Rows: 302
+  Duration: 0.179 min
+  Mean timestamp delta: 35.6254 ms
+  Min timestamp delta: 18.808
+  Max timestamp delta: 370.051
+  <=30ms: 215
+  30-60ms: 64
+  60-200ms: 20
+  200-2000ms: 2
+  >2000ms: 0
+  Duplicate timestamps: 0
+  Negative deltas: 0
+  Sequence resets: 0
+  Estimated long-gap segments: 3
+
+Session: 20260929_005015_499
+  Rows: 661
+  Duration: 0.395 min
+  Mean timestamp delta: 35.9364 ms
+  Min timestamp delta: 13.096
+  Max timestamp delta: 273.995
+  <=30ms: 296
+  30-60ms: 321
+  60-200ms: 37
+  200-2000ms: 6
+  >2000ms: 0
+  Duplicate timestamps: 0
+  Negative deltas: 0
+  Sequence resets: 0
+  Estimated long-gap segments: 7
+
+Session: 20260929_014638_490
+  Rows: 313
+  Duration: 0.153 min
+  Mean timestamp delta: 29.5013 ms
+  Min timestamp delta: 15.797
+  Max timestamp delta: 128.137
+  <=30ms: 282
+  30-60ms: 12
+  60-200ms: 18
+  200-2000ms: 0
+  >2000ms: 0
+  Duplicate timestamps: 0
+  Negative deltas: 0
+  Sequence resets: 0
+  Estimated long-gap segments: 1
+
+Session: 20260928_183018_262
+  Rows: 2,577
+  Duration: 0.944 min
+  Mean timestamp delta: 21.9867 ms
+  Min timestamp delta: 9.483
+  Max timestamp delta: 67.868
+  <=30ms: 2,456
+  30-60ms: 116
+  60-200ms: 4
+  200-2000ms: 0
+  >2000ms: 0
+  Duplicate timestamps: 0
+  Negative deltas: 0
+  Sequence resets: 0
+  Estimated long-gap segments: 1
+
+Session: 20260928_183822_352
+  Rows: 259,218
+  Duration: 102.749 min
+  Mean timestamp delta: 23.7830 ms
+  Min timestamp delta: 10.314
+  Max timestamp delta: 17441.408
+  <=30ms: 243,253
+  30-60ms: 11,547
+  60-200ms: 4,353
+  200-2000ms: 63
+  >2000ms: 1
+  Duplicate timestamps: 0
+  Negative deltas: 0
+  Sequence resets: 0
+  Estimated long-gap segments: 65
+
+Session: 20260928_202455_850
+  Rows: 69,637
+  Duration: 27.123 min
+  Mean timestamp delta: 23.3694 ms
+  Min timestamp delta: 11.519
+  Max timestamp delta: 366.89
+  <=30ms: 65,532
+  30-60ms: 3,005
+  60-200ms: 1,096
+  200-2000ms: 3
+  >2000ms: 0
+  Duplicate timestamps: 0
+  Negative deltas: 0
+  Sequence resets: 0
+  Estimated long-gap segments: 4
+
+
+3. LLM × FOREGROUND STATE COVERAGE
+--------------------------------------------------------------------------------
+LLM=0, FG=0: 22,633 rows | 1 sessions
+LLM=0, FG=1: 2,172 rows | 1 sessions
+LLM=0, FG=2: 54,209 rows | 3 sessions
+LLM=0, FG=3: 26,966 rows | 1 sessions
+LLM=1, FG=0: 3,141 rows | 1 sessions
+LLM=1, FG=1: 45,329 rows | 3 sessions
+LLM=1, FG=2: 3,049 rows | 1 sessions
+LLM=1, FG=3: 2,989 rows | 1 sessions
+LLM=2, FG=0: 54,593 rows | 4 sessions
+LLM=2, FG=1: 5,997 rows | 1 sessions
+LLM=2, FG=2: 26,980 rows | 1 sessions
+LLM=2, FG=3: 3,024 rows | 1 sessions
+LLM=3, FG=0: 24,857 rows | 2 sessions
+LLM=3, FG=1: 4,233 rows | 1 sessions
+LLM=3, FG=2: 28,508 rows | 2 sessions
+LLM=3, FG=3: 25,522 rows | 1 sessions
+
+
+4. EXPERIMENT STRUCTURE
+--------------------------------------------------------------------------------
+Unique macro instances: 19
+Unique meso instances: 106
+Unique micro instances: 553
+Micro intensity values: 486
+Schedule phase values: 24
+Thermal precondition values: 1
+
+
+5. FOREGROUND QoS AUDIT
+--------------------------------------------------------------------------------
+fps_less_than_half_implied: 5,608
+fps_more_than_double_implied: 3,152
+fps_nonpositive: 4,107
+fps_over_1000: 141,196
+frame_time_nonpositive: 4,107
+frame_time_over_250ms: 25
+frame_time_under_0.1ms: 116,403
+p95_less_than_current_frame_time: 10,016
+
+Frame-time ranges:
+  0-1ms: 148,234
+  1-5ms: 94
+  10-16.7ms: 633
+  100ms+: 31
+  16.7-33.3ms: 185,206
+  33.3-100ms: 4
+
+
+6. TIMESTAMP GAP DISTRIBUTION
+--------------------------------------------------------------------------------
+<=30ms: 313,098
+30-60ms: 15,462
+60-200ms: 5,559
+200-2000ms: 74
+>2000ms: 1
+
+
+7. AVAILABILITY FLAGS
+--------------------------------------------------------------------------------
+battery_status_available: 1=334,202
+cpu_available: 1=334,202
+cpu_temperature_available: 1=334,202
+dram_available: 0=334,202
+energy_meter_available: 0=334,202
+first_token_available: 0=3,360, 1=330,842
+foreground_qos_available: 0=4,107, 1=330,095
+frame_data_available: 0=4,107, 1=330,095
+gpu_available: 1=334,202
+llm_runtime_available: 1=334,202
+npu_frequency_available: 0=334,202
+npu_present: 1=334,202
+npu_temperature_available: 0=334,202
+npu_utilization_available: 0=334,202
+power_available: 0=334,202
+system_power_available: 0=334,202
+thermal_available: 1=334,202
+throughput_available: 0=3,360, 1=330,842
+token_latency_available: 0=4,470, 1=329,732
+
+
+8. COLUMN QUALITY
+--------------------------------------------------------------------------------
+
+session_id
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 2.026092817434397e+16
+  max: 2.026092901463849e+16
+  zero: 0
+  negative: 0
+
+row_id
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 259217.0
+  zero: 8
+  negative: 0
+
+timestamp_us
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 16181478786.0
+  max: 836308579347.0
+  zero: 0
+  negative: 0
+
+sequence_id
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 259217.0
+  zero: 8
+  negative: 0
+
+cpu_util_total
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 100.0
+  zero: 33
+  negative: 0
+
+cpu_util_core_0
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 100.0
+  zero: 3,329
+  negative: 0
+
+cpu_util_core_1
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 100.0
+  zero: 2,334
+  negative: 0
+
+cpu_util_core_2
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 100.0
+  zero: 8,104
+  negative: 0
+
+cpu_util_core_3
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 100.0
+  zero: 8,177
+  negative: 0
+
+cpu_util_core_4
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 100.0
+  zero: 2,535
+  negative: 0
+
+cpu_util_core_5
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 100.0
+  zero: 4,167
+  negative: 0
+
+cpu_util_core_6
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 100.0
+  zero: 7,777
+  negative: 0
+
+cpu_util_core_7
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 100.0
+  zero: 7,840
+  negative: 0
+
+cpu_active_cores
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 12.0
+  max: 16.0
+  zero: 0
+  negative: 0
+
+cpu_freq_mhz
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 934.0
+  max: 3417.0
+  zero: 0
+  negative: 0
+
+cpu_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+mem_total_bytes
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 16824262656.0
+  max: 68000292864.0
+  zero: 0
+  negative: 0
+
+mem_available_bytes
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 80351232.0
+  max: 58785148928.0
+  zero: 0
+  negative: 0
+
+mem_used_bytes
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 9215143936.0
+  max: 66896461824.0
+  zero: 0
+  negative: 0
+
+memory_load_percent
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 13.0
+  max: 99.0
+  zero: 0
+  negative: 0
+
+process_working_set_bytes
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 28794880.0
+  max: 65175552.0
+  zero: 0
+  negative: 0
+
+process_private_bytes
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 29257728.0
+  max: 64782336.0
+  zero: 0
+  negative: 0
+
+process_page_fault_count
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 17144.0
+  max: 147422546.0
+  zero: 0
+  negative: 0
+
+system_page_faults_per_sec
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 1181818.1818181816
+  zero: 3
+  negative: 0
+
+system_memory_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+process_memory_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+page_fault_rate_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+gpu_utilization_percent
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 100.0
+  zero: 137,316
+  negative: 0
+
+gpu_memory_used_bytes
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 14286848.0
+  zero: 1
+  negative: 0
+
+gpu_memory_budget_bytes
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 7723089306.0
+  max: 33194840064.0
+  zero: 0
+  negative: 0
+
+gpu_temperature_c
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+gpu_frequency_mhz
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+gpu_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+snapdragon_gpu
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 1.0
+  zero: 2,770
+  negative: 0
+
+npu_utilization_percent
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+npu_frequency_mhz
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+npu_temperature_c
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+npu_present
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+npu_utilization_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+npu_frequency_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+npu_temperature_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+snapdragon_npu
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+dram_read_bandwidth_mb_s
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+dram_write_bandwidth_mb_s
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+dram_utilization_percent
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+dram_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+snapdragon_dram_backend
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+frame_timestamp_us
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 836307674252.0
+  zero: 4,107
+  negative: 0
+
+frame_time_ms
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 404.3608
+  zero: 4,107
+  negative: 0
+
+fps
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 361445.7831325303
+  zero: 4,107
+  negative: 0
+
+frame_time_p95
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 31.671805
+  zero: 4,107
+  negative: 0
+
+frame_time_p99
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 184.72164300000046
+  zero: 4,107
+  negative: 0
+
+foreground_pid
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 20388.0
+  zero: 3,656
+  negative: 0
+
+frame_count
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 120.0
+  zero: 4,107
+  negative: 0
+
+foreground_qos_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 1.0
+  zero: 4,107
+  negative: 0
+
+frame_data_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 1.0
+  zero: 4,107
+  negative: 0
+
+llm_timestamp_us
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 16181478786.0
+  max: 836308579348.0
+  zero: 0
+  negative: 0
+
+llm_state
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 2.0
+  zero: 26,002
+  negative: 0
+
+prompt_tokens
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1536.0
+  zero: 0
+  negative: 0
+
+generated_tokens
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 512.0
+  zero: 3,360
+  negative: 0
+
+total_tokens
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 221.0
+  max: 2047.0
+  zero: 0
+  negative: 0
+
+context_length
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 2048.0
+  max: 4096.0
+  zero: 0
+  negative: 0
+
+ttft_ms
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 12264.483
+  zero: 3,360
+  negative: 0
+
+token_latency_ms
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 389.065
+  zero: 4,470
+  negative: 0
+
+inter_token_latency_ms
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 389.065
+  zero: 4,470
+  negative: 0
+
+tokens_per_sec
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 39.54473228216245
+  zero: 3,360
+  negative: 0
+
+inference_start_us
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+first_token_us
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+last_token_us
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+inference_active
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 1.0
+  zero: 26,002
+  negative: 0
+
+first_token_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 1.0
+  zero: 3,360
+  negative: 0
+
+token_latency_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 1.0
+  zero: 4,470
+  negative: 0
+
+throughput_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 1.0
+  zero: 3,360
+  negative: 0
+
+llm_runtime_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+llm_runtime_active
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+llm_process_id
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 2188.0
+  max: 22324.0
+  zero: 0
+  negative: 0
+
+llm_process_cpu_percent
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 100.0
+  zero: 20,589
+  negative: 0
+
+llm_process_memory_bytes
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 2242875392.0
+  max: 12110090240.0
+  zero: 0
+  negative: 0
+
+measured_power_watts
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+system_power_watts
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+measured_energy_pwh
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+measurement_time_100ns
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+battery_percent
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 47.0
+  max: 100.0
+  zero: 0
+  negative: 0
+
+ac_online
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 1.0
+  zero: 332,744
+  negative: 0
+
+battery_charging
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+battery_present
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+energy_meter_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+power_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+system_power_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+battery_status_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+meter_is_system_scope
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+cpu_temperature_c
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 27.850000000000023
+  max: 54.25
+  zero: 0
+  negative: 0
+
+cpu_temperature_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+throttle_event
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+thermal_available
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+cooling_mode
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+commanded_llm_level
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 3.0
+  zero: 105,980
+  negative: 0
+
+commanded_fg_level
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 3.0
+  zero: 105,224
+  negative: 0
+
+macro_id
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 100000.0
+  zero: 0
+  negative: 0
+
+meso_id
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 9.0
+  zero: 71,865
+  negative: 0
+
+micro_id
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 45.0
+  zero: 43,049
+  negative: 0
+
+micro_intensity
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.6803141285039891
+  zero: 313,968
+  negative: 0
+
+schedule_phase_id
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 100014.0
+  zero: 0
+  negative: 0
+
+session_seed
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 16180625727900.0
+  max: 836266996668800.0
+  zero: 0
+  negative: 0
+
+thermal_precondition
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.0
+  max: 0.0
+  zero: 334,202
+  negative: 0
+
+experiment_elapsed_s
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 0.000149
+  max: 6165.23535
+  zero: 0
+  negative: 0
+
+experiment_active
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+valid
+  missing: 0
+  non_numeric: 0
+  NaN: 0
+  Inf: 0
+  numeric: 334,202
+  min: 1.0
+  max: 1.0
+  zero: 0
+  negative: 0
+
+
+9. MULTI-HORIZON TRAINING CAPACITY
+--------------------------------------------------------------------------------
+Nominal sampling interval: 20.0 ms
+TCN lookback: 100 steps (~2000 ms)
+250 ms horizon: 13 future steps
+750 ms horizon: 38 future steps
+2000 ms horizon: 100 future steps
+
+Exact usable training windows must be constructed after timestamp segmentation. This audit does not fabricate or interpolate missing observations.
+
+
+10. DATA HANDLING NOTES
+--------------------------------------------------------------------------------
+• Raw telemetry.csv was NOT modified.
+• No rows were deleted by this audit.
+• Extreme QoS values are flagged, not automatically removed.
+• FPS/frame-time anomalies are flagged for unit validation.
+• Missing sensor values are reported through availability statistics.
+• Timestamp gaps are reported for later segmentation.
+• Training/test splitting should be temporal/session-aware,
+  not random row-wise splitting.

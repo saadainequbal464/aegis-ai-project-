@@ -1,0 +1,9 @@
+qos_check,count
+fps_less_than_half_implied,5608
+fps_more_than_double_implied,3152
+fps_nonpositive,4107
+fps_over_1000,141196
+frame_time_nonpositive,4107
+frame_time_over_250ms,25
+frame_time_under_0.1ms,116403
+p95_less_than_current_frame_time,10016

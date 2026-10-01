@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "feature_count": 40,
+  "features": [
+    {
+      "index": 0,
+      "name": "cpu_mean",
+      "cpp_index": 0
+    },
+    {
+      "index": 1,
+      "name": "cpu_max",
+      "cpp_index": 1
+    },
+    {
+      "index": 2,
+      "name": "cpu_std",
+      "cpp_index": 2
+    },
+    {
+      "index": 3,
+      "name": "cpu_trend",
+      "cpp_index": 3
+    },
+    {
+      "index": 4,
+      "name": "memory_mean",
+      "cpp_index": 4
+    },
+    {
+      "index": 5,
+      "name": "memory_max",
+      "cpp_index": 5
+    },
+    {
+      "index": 6,
+      "name": "memory_trend",
+      "cpp_index": 6
+    },
+    {
+      "index": 7,
+      "name": "gpu_mean",
+      "cpp_index": 7
+    },
+    {
+      "index": 8,
+      "name": "gpu_max",
+      "cpp_index": 8
+    },
+    {
+      "index": 9,
+      "name": "gpu_trend",
+      "cpp_index": 9
+    },
+    {
+      "index": 10,
+      "name": "gpu_memory_ratio_mean",
+      "cpp_index": 10
+    },
+    {
+      "index": 11,
+      "name": "gpu_memory_ratio_max",
+      "cpp_index": 11
+    },
+    {
+      "index": 12,
+      "name": "gpu_memory_ratio_trend",
+      "cpp_index": 12
+    },
+    {
+      "index": 13,
+      "name": "gpu_temperature_mean",
+      "cpp_index": 13
+    },
+    {
+      "index": 14,
+      "name": "gpu_temperature_max",
+      "cpp_index": 14
+    },
+    {
+      "index": 15,
+      "name": "npu_mean",
+      "cpp_index": 15
+    },
+    {
+      "index": 16,
+      "name": "npu_max",
+      "cpp_index": 16
+    },
+    {
+      "index": 17,
+      "name": "npu_trend",
+      "cpp_index": 17
+    },
+    {
+      "index": 18,
+      "name": "dram_read_mean",
+      "cpp_index": 18
+    },
+    {
+      "index": 19,
+      "name": "dram_read_max",
+      "cpp_index": 19
+    },
+    {
+      "index": 20,
+      "name": "dram_write_mean",
+      "cpp_index": 20
+    },
+    {
+      "index": 21,
+      "name": "dram_write_max",
+      "cpp_index": 21
+    },
+    {
+      "index": 22,
+      "name": "dram_util_mean",
+      "cpp_index": 22
+    },
+    {
+      "index": 23,
+      "name": "dram_util_max",
+      "cpp_index": 23
+    },
+    {
+      "index": 24,
+      "name": "dram_util_trend",
+      "cpp_index": 24
+    },
+    {
+      "index": 25,
+      "name": "frame_time_mean",
+      "cpp_index": 25
+    },
+    {
+      "index": 26,
+      "name": "frame_time_max",
+      "cpp_index": 26
+    },
+    {
+      "index": 27,
+      "name": "frame_time_std",
+      "cpp_index": 27
+    },
+    {
+      "index": 28,
+      "name": "frame_time_trend",
+      "cpp_index": 28
+    },
+    {
+      "index": 29,
+      "name": "fps_mean",
+      "cpp_index": 29
+    },
+    {
+      "index": 30,
+      "name": "fps_min",
+      "cpp_index": 30
+    },
+    {
+      "index": 31,
+      "name": "fps_trend",
+      "cpp_index": 31
+    },
+    {
+      "index": 32,
+      "name": "token_rate_mean",
+      "cpp_index": 32
+    },
+    {
+      "index": 33,
+      "name": "token_rate_min",
+      "cpp_index": 33
+    },
+    {
+      "index": 34,
+      "name": "token_rate_trend",
+      "cpp_index": 34
+    },
+    {
+      "index": 35,
+      "name": "token_latency_mean",
+      "cpp_index": 35
+    },
+    {
+      "index": 36,
+      "name": "token_latency_max",
+      "cpp_index": 36
+    },
+    {
+      "index": 37,
+      "name": "token_latency_trend",
+      "cpp_index": 37
+    },
+    {
+      "index": 38,
+      "name": "ttft_mean",
+      "cpp_index": 38
+    },
+    {
+      "index": 39,
+      "name": "ttft_max",
+      "cpp_index": 39
+    }
+  ],
+  "event_threshold": 1.01,
+  "horizons_ms": [
+    250,
+    750,
+    2000
+  ],
+  "source": "ComputeFeatureVector"
+}

@@ -1,0 +1,78 @@
+{
+  "method": "split_conformal_interval_calibration",
+  "alpha": 0.1,
+  "target_coverage": 0.9,
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "horizons_ms": [
+    250,
+    750,
+    2000
+  ],
+  "corrections": {
+    "250": {
+      "interval": 0.0,
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "750": {
+      "interval": 0.0,
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    },
+    "2000": {
+      "interval": 0.0,
+      "q10": 0.0,
+      "q50": 0.0,
+      "q90": 0.0
+    }
+  },
+  "validation": {
+    "250": {
+      "sample_count": 69,
+      "coverage": 1.0,
+      "target_coverage": 0.9,
+      "mean_interval_width": 0.2631850259379349,
+      "correction": 0.0
+    },
+    "750": {
+      "sample_count": 69,
+      "coverage": 1.0,
+      "target_coverage": 0.9,
+      "mean_interval_width": 0.2606379950271258,
+      "correction": 0.0
+    },
+    "2000": {
+      "sample_count": 69,
+      "coverage": 1.0,
+      "target_coverage": 0.9,
+      "mean_interval_width": 0.26423355489457556,
+      "correction": 0.0
+    }
+  },
+  "test": {
+    "250": {
+      "sample_count": 71,
+      "coverage": 1.0,
+      "target_coverage": 0.9,
+      "mean_interval_width": 0.3364733299596451
+    },
+    "750": {
+      "sample_count": 71,
+      "coverage": 1.0,
+      "target_coverage": 0.9,
+      "mean_interval_width": 0.25280497309295874
+    },
+    "2000": {
+      "sample_count": 71,
+      "coverage": 1.0,
+      "target_coverage": 0.9,
+      "mean_interval_width": 0.26370316964180385
+    }
+  }
+}

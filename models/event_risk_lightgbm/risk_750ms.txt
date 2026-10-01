@@ -1,0 +1,186 @@
+tree
+version=v4
+num_class=1
+num_tree_per_iteration=1
+label_index=0
+max_feature_idx=39
+objective=binary sigmoid:1
+feature_names=cpu_mean cpu_max cpu_std cpu_trend memory_mean memory_max memory_trend gpu_mean gpu_max gpu_trend gpu_memory_ratio_mean gpu_memory_ratio_max gpu_memory_ratio_trend gpu_temperature_mean gpu_temperature_max npu_mean npu_max npu_trend dram_read_mean dram_read_max dram_write_mean dram_write_max dram_util_mean dram_util_max dram_util_trend frame_time_mean frame_time_max frame_time_std frame_time_trend fps_mean fps_min fps_trend token_rate_mean token_rate_min token_rate_trend token_latency_mean token_latency_max token_latency_trend ttft_mean ttft_max
+feature_infos=[19.244325712127569:100] [37.5:100] [0:44.811149078521339] [-2.6726575682475691:2.6890418014336936] [18:98.140000000000001] [18:99] [-0.031212484993997501:0.030012004801920698] [1.4808173408183041:89.444732296375108] [2.6681454531443936:100] [-2.5117997182872722:2.6554227992004571] [0.00022630215977889999:0.0017040393395134001] [0.00022630215977889999:0.0017040393395134001] [-7.3324576782019304e-07:1.3961295680212755e-06] none none none none none none none none none none none none [16.195404347826088:30.835500000000003] [16.197700000000001:31.451699999999999] [0:0.45501223758435411] [-0.027712663265306098:0.052284415584415399] [48.131192095160188:64.085049016323609] [45.012380655299246:64.085049016323609] [-0.36175587537107817:0.25753231887921241] [0:37.460195402953183] [0:36.876524823348873] [-0.92344507950316401:0.62574331992094567] [0:94.338759999999994] [0:203.20699999999999] [-1.7101430492196883:2.1664806242496994] [0:3540.857] [0:3540.857]
+tree_sizes=467 1333
+
+Tree=0
+num_leaves=3
+num_cat=0
+split_feature=29 35
+split_gain=6.14472e+07 2.40458e+06
+threshold=60.039099070696778 35.398920000000011
+decision_type=2 2
+left_child=1 -1
+right_child=-2 -3
+leaf_value=-6.9291290480851888 -6.9302646133608814 22.827861729191952
+leaf_weight=2.4906193959759539 127.00851771631278 129.97774673509412
+leaf_count=2477 126314 368
+internal_value=7.98195 22.2688
+internal_weight=259.477 132.468
+internal_count=129159 2845
+is_linear=0
+shrinkage=1
+
+
+Tree=1
+num_leaves=11
+num_cat=0
+split_feature=38 29 31 35 31 9 11 35 2 9
+split_gain=264882 73638.1 9755.33 742.155 322.383 129.682 111.02 1166.32 97.081 13.0476
+threshold=2442.8584800000003 60.06990753405757 0.056546887979669155 35.398920000000011 -0.023734969794724298 0.0028102711806895003 0.00024548972021815003 34.273060000000008 15.189792144935046 0.011755989610042752
+decision_type=2 2 2 2 2 2 2 2 2 2
+left_child=2 -2 4 -4 5 -1 7 -6 -9 -7
+right_child=1 -3 3 -5 6 9 -8 8 -10 -11
+leaf_value=-0.0088755145139090118 -54.728546598762094 -0.0066236192109793519 -0.0021768201890146753 -9.6192745759925842 -0.027628616267731321 -0.0008549012984735262 -0.030005218048751146 -3.4983373240803477 -0.002176820189014772 -2.0603151847057588
+leaf_weight=0.04196458408503323 0.0019588266063612627 0.028299154830172202 0.0078155165538239535 0.002927502798067306 1.1508337059058504 0.0029313026455497484 124.43182329969873 0.0029311831238220129 0.0078155165538191795 0.0019545881146734168
+leaf_count=65 247 29 8 36 1178 7 127539 18 8 24
+internal_value=-0.0867707 -42.845 -0.0424109 -8.94253 -0.0345386 -1.4396 -0.0328696 -0.313005 -3.25358 -2.00357
+internal_weight=125.681 0.030258 125.651 0.010743 125.64 0.0468505 125.593 1.16158 0.0107467 0.00488589
+internal_count=129159 276 128883 44 128839 96 128743 1204 26 31
+is_linear=0
+shrinkage=0.03
+
+
+end of trees
+
+feature_importances:
+token_latency_mean=3
+gpu_trend=2
+fps_mean=2
+fps_trend=2
+cpu_std=1
+gpu_memory_ratio_max=1
+ttft_mean=1
+
+parameters:
+[boosting: gbdt]
+[objective: binary]
+[metric: binary_logloss]
+[tree_learner: serial]
+[device_type: cpu]
+[data_sample_strategy: bagging]
+[data: ]
+[valid: ]
+[num_iterations: 500]
+[learning_rate: 0.03]
+[num_leaves: 31]
+[num_threads: 10]
+[seed: 42]
+[deterministic: 0]
+[force_col_wise: 0]
+[force_row_wise: 0]
+[histogram_pool_size: -1]
+[max_depth: -1]
+[min_data_in_leaf: 10]
+[min_sum_hessian_in_leaf: 0.001]
+[bagging_fraction: 0.9]
+[pos_bagging_fraction: 1]
+[neg_bagging_fraction: 1]
+[bagging_freq: 0]
+[bagging_seed: 400]
+[bagging_by_query: 0]
+[feature_fraction: 0.9]
+[feature_fraction_bynode: 1]
+[feature_fraction_seed: 30056]
+[extra_trees: 0]
+[extra_seed: 12879]
+[early_stopping_round: 0]
+[early_stopping_min_delta: 0]
+[first_metric_only: 0]
+[max_delta_step: 0]
+[lambda_l1: 0]
+[lambda_l2: 0.1]
+[linear_lambda: 0]
+[min_gain_to_split: 0]
+[drop_rate: 0.1]
+[max_drop: 50]
+[skip_drop: 0.5]
+[xgboost_dart_mode: 0]
+[uniform_drop: 0]
+[drop_seed: 17869]
+[top_rate: 0.2]
+[other_rate: 0.1]
+[min_data_per_group: 100]
+[max_cat_threshold: 32]
+[cat_l2: 10]
+[cat_smooth: 10]
+[max_cat_to_onehot: 4]
+[top_k: 20]
+[monotone_constraints: ]
+[monotone_constraints_method: basic]
+[monotone_penalty: 0]
+[feature_contri: ]
+[forcedsplits_filename: ]
+[refit_decay_rate: 0.9]
+[cegb_tradeoff: 1]
+[cegb_penalty_split: 0]
+[cegb_penalty_feature_lazy: ]
+[cegb_penalty_feature_coupled: ]
+[path_smooth: 0]
+[interaction_constraints: ]
+[verbosity: -1]
+[saved_feature_importance_type: 0]
+[use_quantized_grad: 0]
+[num_grad_quant_bins: 4]
+[quant_train_renew_leaf: 0]
+[stochastic_rounding: 1]
+[linear_tree: 0]
+[max_bin: 255]
+[max_bin_by_feature: ]
+[min_data_in_bin: 3]
+[bin_construct_sample_cnt: 200000]
+[data_random_seed: 175]
+[is_enable_sparse: 1]
+[enable_bundle: 1]
+[use_missing: 1]
+[zero_as_missing: 0]
+[feature_pre_filter: 1]
+[pre_partition: 0]
+[two_round: 0]
+[header: 0]
+[label_column: ]
+[weight_column: ]
+[group_column: ]
+[ignore_column: ]
+[categorical_feature: ]
+[forcedbins_filename: ]
+[precise_float_parser: 0]
+[parser_config_file: ]
+[objective_seed: 16083]
+[num_class: 1]
+[is_unbalance: 0]
+[scale_pos_weight: 992.531]
+[sigmoid: 1]
+[boost_from_average: 1]
+[reg_sqrt: 0]
+[alpha: 0.9]
+[fair_c: 1]
+[poisson_max_delta_step: 0.7]
+[tweedie_variance_power: 1.5]
+[lambdarank_truncation_level: 30]
+[lambdarank_norm: 1]
+[label_gain: ]
+[lambdarank_position_bias_regularization: 0]
+[eval_at: ]
+[multi_error_top_k: 1]
+[auc_mu_weights: ]
+[num_machines: 1]
+[local_listen_port: 12400]
+[time_out: 120]
+[machine_list_filename: ]
+[machines: ]
+[gpu_platform_id: -1]
+[gpu_device_id: -1]
+[gpu_device_id_list: ]
+[gpu_use_dp: 0]
+[num_gpu: 1]
+
+end of parameters
+
+pandas_categorical:[]

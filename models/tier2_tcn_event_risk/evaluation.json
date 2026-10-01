@@ -1,0 +1,611 @@
+{
+  "task": "binary_event_risk",
+  "event_threshold": 1.01,
+  "sequence_length": 20,
+  "features": [
+    "cpu_mean",
+    "cpu_max",
+    "cpu_std",
+    "cpu_trend",
+    "memory_mean",
+    "memory_max",
+    "memory_trend",
+    "gpu_mean",
+    "gpu_max",
+    "gpu_trend",
+    "gpu_memory_ratio_mean",
+    "gpu_memory_ratio_max",
+    "gpu_memory_ratio_trend",
+    "gpu_temperature_mean",
+    "gpu_temperature_max",
+    "npu_mean",
+    "npu_max",
+    "npu_trend",
+    "dram_read_mean",
+    "dram_read_max",
+    "dram_write_mean",
+    "dram_write_max",
+    "dram_util_mean",
+    "dram_util_max",
+    "dram_util_trend",
+    "frame_time_mean",
+    "frame_time_max",
+    "frame_time_std",
+    "frame_time_trend",
+    "fps_mean",
+    "fps_min",
+    "fps_trend",
+    "token_rate_mean",
+    "token_rate_min",
+    "token_rate_trend",
+    "token_latency_mean",
+    "token_latency_max",
+    "token_latency_trend",
+    "ttft_mean",
+    "ttft_max"
+  ],
+  "horizons_ms": [
+    250,
+    750,
+    2000
+  ],
+  "checkpoint": "C:\\Users\\Lenovo\\Desktop\\aegis ai project\\models\\tier2_tcn_event_risk\\tcn_event_risk_best.pt",
+  "results": {
+    "validation": {
+      "rows": 27675,
+      "sequences": 27580,
+      "metrics": {
+        "250": {
+          "positives": 1,
+          "negatives": 27579,
+          "prob_min": 0.0,
+          "prob_max": 0.9998056292533875,
+          "prob_mean": 0.0015913022216409445,
+          "prob_median": 5.551545132967218e-20,
+          "threshold_0_5": {
+            "tp": 1,
+            "fp": 44,
+            "tn": 27535,
+            "fn": 0,
+            "recall": 1.0,
+            "fpr": 0.0015954168026396896
+          },
+          "roc_auc": 0.9991841618622865,
+          "pr_auc": 0.023255813953488372
+        },
+        "750": {
+          "positives": 17,
+          "negatives": 27563,
+          "prob_min": 0.0,
+          "prob_max": 0.9999984502792358,
+          "prob_mean": 0.0016118624480441213,
+          "prob_median": 5.830560313637918e-26,
+          "threshold_0_5": {
+            "tp": 17,
+            "fp": 28,
+            "tn": 27535,
+            "fn": 0,
+            "recall": 1.0,
+            "fpr": 0.0010158545876718789
+          },
+          "roc_auc": 0.99947393244567,
+          "pr_auc": 0.3953488372093023
+        },
+        "2000": {
+          "positives": 29,
+          "negatives": 27551,
+          "prob_min": 0.0,
+          "prob_max": 0.9999949932098389,
+          "prob_mean": 0.0016107510309666395,
+          "prob_median": 4.267323214215743e-34,
+          "threshold_0_5": {
+            "tp": 29,
+            "fp": 16,
+            "tn": 27535,
+            "fn": 0,
+            "recall": 1.0,
+            "fpr": 0.0005807411709193859
+          },
+          "roc_auc": 0.999691481252949,
+          "pr_auc": 0.6744186046511628
+        }
+      },
+      "top_10_predictions": {
+        "250": [
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832934131333,
+            "prediction_probability": 0.9998056292533875,
+            "actual_event": 0,
+            "rho_250ms": 1.0083962416407708
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832934101811,
+            "prediction_probability": 0.9988102912902832,
+            "actual_event": 0,
+            "rho_250ms": 1.0083962416407708
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832933806474,
+            "prediction_probability": 0.9722903370857239,
+            "actual_event": 0,
+            "rho_250ms": 1.0083962416407708
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926926422,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.0055510508131094
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926773028,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.0055510508131094
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926913221,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.0055510508131094
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926877435,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.0055510508131094
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926812683,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.0055510508131094
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926634716,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.006495963992518
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926602493,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.006495963992518
+          }
+        ],
+        "750": [
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832934131333,
+            "prediction_probability": 0.9999984502792358,
+            "actual_event": 0,
+            "rho_750ms": 1.0083962416407708
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832934101811,
+            "prediction_probability": 0.9999674558639526,
+            "actual_event": 0,
+            "rho_750ms": 1.0083962416407708
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832933806474,
+            "prediction_probability": 0.9872850775718689,
+            "actual_event": 0,
+            "rho_750ms": 1.0083962416407708
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926926422,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 1,
+            "rho_750ms": 1.010216061842338
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926773028,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 0,
+            "rho_750ms": 1.0055510508131094
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926913221,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 1,
+            "rho_750ms": 1.010216061842338
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926877435,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 1,
+            "rho_750ms": 1.010216061842338
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926812683,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 0,
+            "rho_750ms": 1.0055510508131094
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926634716,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 0,
+            "rho_750ms": 1.006495963992518
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926602493,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 0,
+            "rho_750ms": 1.006495963992518
+          }
+        ],
+        "2000": [
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832934131333,
+            "prediction_probability": 0.9999949932098389,
+            "actual_event": 0,
+            "rho_2000ms": 1.0083962416407708
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832934101811,
+            "prediction_probability": 0.9999383687973022,
+            "actual_event": 0,
+            "rho_2000ms": 1.0083962416407708
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832933806474,
+            "prediction_probability": 0.9892667531967163,
+            "actual_event": 0,
+            "rho_2000ms": 1.0083962416407708
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926926422,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 1,
+            "rho_2000ms": 1.014008624429019
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926773028,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 1,
+            "rho_2000ms": 1.014008624429019
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926913221,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 1,
+            "rho_2000ms": 1.014008624429019
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926877435,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 1,
+            "rho_2000ms": 1.014008624429019
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926812683,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 1,
+            "rho_2000ms": 1.014008624429019
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926634716,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 1,
+            "rho_2000ms": 1.0111653587180294
+          },
+          {
+            "session_id": "20260929_005015_499",
+            "timestamp_us": 832926602493,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 1,
+            "rho_2000ms": 1.0111653587180294
+          }
+        ]
+      }
+    },
+    "test": {
+      "rows": 27682,
+      "sequences": 27587,
+      "metrics": {
+        "250": {
+          "positives": 0,
+          "negatives": 27587,
+          "prob_min": 0.0,
+          "prob_max": 0.9722380638122559,
+          "prob_mean": 0.00021193127031438053,
+          "prob_median": 1.1817537890411514e-23,
+          "threshold_0_5": {
+            "tp": 0,
+            "fp": 6,
+            "tn": 27581,
+            "fn": 0,
+            "recall": 0.0,
+            "fpr": 0.00021749374705477218
+          },
+          "roc_auc": null,
+          "pr_auc": null
+        },
+        "750": {
+          "positives": 0,
+          "negatives": 27587,
+          "prob_min": 0.0,
+          "prob_max": 0.9869177937507629,
+          "prob_mean": 0.00021467776969075203,
+          "prob_median": 1.0038066300372317e-30,
+          "threshold_0_5": {
+            "tp": 0,
+            "fp": 6,
+            "tn": 27581,
+            "fn": 0,
+            "recall": 0.0,
+            "fpr": 0.00021749374705477218
+          },
+          "roc_auc": null,
+          "pr_auc": null
+        },
+        "2000": {
+          "positives": 0,
+          "negatives": 27587,
+          "prob_min": 0.0,
+          "prob_max": 0.9887192845344543,
+          "prob_mean": 0.00021504060714505613,
+          "prob_median": 0.0,
+          "threshold_0_5": {
+            "tp": 0,
+            "fp": 6,
+            "tn": 27581,
+            "fn": 0,
+            "recall": 0.0,
+            "fpr": 0.00021749374705477218
+          },
+          "roc_auc": null,
+          "pr_auc": null
+        }
+      },
+      "top_10_predictions": {
+        "250": [
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307986082,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836308009814,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307938350,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307889099,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307913512,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307962803,
+            "prediction_probability": 0.9722380638122559,
+            "actual_event": 0,
+            "rho_250ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236792861,
+            "prediction_probability": 0.0005220996681600809,
+            "actual_event": 0,
+            "rho_250ms": 1.0000000000000002
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236752978,
+            "prediction_probability": 0.0004861135967075825,
+            "actual_event": 0,
+            "rho_250ms": 1.0000000000000002
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236773842,
+            "prediction_probability": 0.00047918190830387175,
+            "actual_event": 0,
+            "rho_250ms": 1.0000000000000002
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236705097,
+            "prediction_probability": 0.00046422850573435426,
+            "actual_event": 0,
+            "rho_250ms": 1.0000000000000002
+          }
+        ],
+        "750": [
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307986082,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 0,
+            "rho_750ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836308009814,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 0,
+            "rho_750ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307938350,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 0,
+            "rho_750ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307962803,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 0,
+            "rho_750ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307913512,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 0,
+            "rho_750ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307889099,
+            "prediction_probability": 0.9869177937507629,
+            "actual_event": 0,
+            "rho_750ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236792861,
+            "prediction_probability": 3.8603593566222116e-05,
+            "actual_event": 0,
+            "rho_750ms": 1.0000000000000002
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236752978,
+            "prediction_probability": 3.517068762448616e-05,
+            "actual_event": 0,
+            "rho_750ms": 1.0000000000000002
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236773842,
+            "prediction_probability": 3.4518088796176016e-05,
+            "actual_event": 0,
+            "rho_750ms": 1.0000000000000002
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236705097,
+            "prediction_probability": 3.312019180157222e-05,
+            "actual_event": 0,
+            "rho_750ms": 1.0000000000000002
+          }
+        ],
+        "2000": [
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836308009814,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 0,
+            "rho_2000ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307938350,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 0,
+            "rho_2000ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307913512,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 0,
+            "rho_2000ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307986082,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 0,
+            "rho_2000ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307962803,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 0,
+            "rho_2000ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260929_014638_490",
+            "timestamp_us": 836307889099,
+            "prediction_probability": 0.9887192845344543,
+            "actual_event": 0,
+            "rho_2000ms": 1.0009928557429386
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236792861,
+            "prediction_probability": 5.609450113297498e-07,
+            "actual_event": 0,
+            "rho_2000ms": 1.0
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236752978,
+            "prediction_probability": 4.968636062585574e-07,
+            "actual_event": 0,
+            "rho_2000ms": 1.0
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236773842,
+            "prediction_probability": 4.848892558584339e-07,
+            "actual_event": 0,
+            "rho_2000ms": 1.0000000000000002
+          },
+          {
+            "session_id": "20260928_183018_262",
+            "timestamp_us": 16236705097,
+            "prediction_probability": 4.594693905346503e-07,
+            "actual_event": 0,
+            "rho_2000ms": 1.0
+          }
+        ]
+      }
+    }
+  }
+}

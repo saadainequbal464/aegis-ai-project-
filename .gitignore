@@ -1,0 +1,66 @@
+# =========================
+# Python environments
+# =========================
+.venv/
+.qairt-venv/
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# Node / frontend dependencies
+# =========================
+node_modules/
+dist/
+build/
+
+# =========================
+# Large archives / backups
+# =========================
+*.zip
+
+# =========================
+# Large generated telemetry/data
+# =========================
+telemetry_cleaned.csv
+
+# =========================
+# C/C++ build artifacts
+# =========================
+*.obj
+*.o
+*.ilk
+*.pdb
+*.lib
+*.exp
+
+# =========================
+# Executables / runtime binaries
+# =========================
+*.exe
+*.dll
+
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.pyc
+
+# =========================
+# Logs / temporary files
+# =========================
+*.log
+*.tmp
+
+# =========================
+# Misc accidental files
+# =========================
+powershell
+scp
+rd
+# Telemetry build/test artifacts
+telemetry/*.obj
+telemetry/risk_fusion_test.exe
+telemetry/PresentMon-2.6.0-x64.zip
